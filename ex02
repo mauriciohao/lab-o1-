@@ -1,0 +1,18 @@
+#include <stdio.h>
+// exercicio 2
+int main()
+{
+  float peso;
+  float altura;
+  float imc;
+
+  printf("Peso da pessoa(Em quilogrmas):");
+  scanf("%F",&peso);
+  printf("Altura da pessoa(Em metros):");
+  scanf("%f",&altura);
+
+  imc = peso / (altura * altura);
+  printf("O IMC de uma pessoa com peso %.2f kg e altura %.2f m é igual a %.2f\n",peso,altura,imc);
+
+  return 0;
+}

@@ -1,0 +1,17 @@
+#include <stdio.h>
+// exercicio 5
+#define PI 3.14159265
+
+int main()
+{
+ float raio;
+ float area;
+ 
+ printf("Digite o valor do raio do círculo: ");
+ scanf("%f", &raio);
+
+ area = PI * raio * raio;
+ printf("Um círculo com raio %.2f tem área igual a %.2f.\n", raio, area);
+
+ return 0;
+}
