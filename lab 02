@@ -1,0 +1,28 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<time.h>
+//exercicio 01 
+
+int main(){
+  srand(time(NULL));
+  int dado;
+  dado = rand()%100+1;
+
+  int palpite;
+  printf("De seu palpite: ");
+  scanf("%d",&palpite);
+
+  while(palpite < 1 || palpite > 100){
+    printf("De sue palpite: ");
+    scanf("%d",&palpite);
+  }
+  if(palpite == dado){
+    printf("Parabéns!!! Você acertou!\n");
+  }
+  if (palpite < dado){
+    printf("Você chutou muito baixo! O valor correto é %d.\n", dado);
+  }  
+  else{
+    printf("Você chutou muito alto! O valor correto é %d.\n", dado);
+  }
+}
