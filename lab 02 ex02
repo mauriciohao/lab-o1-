@@ -1,0 +1,35 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+//exercicio 02 
+
+int main() {
+    int num;
+    int palpite;
+    int tentativas = 0;
+    srand(time(NULL)); 
+    num = rand() % 100 + 1; 
+
+    do {
+        printf("De seu palpite: ");
+        scanf("%d", &palpite);
+    } while (palpite < 1 || palpite > 100); 
+
+    while (palpite != num) {
+        tentativas++; 
+        if (palpite < num) {
+            printf("Você chutou muito baixo! Tente novamente.\n");
+        } else {
+            printf("Você chutou muito alto! Tente novamente.\n");
+        }
+        do {
+            printf("Digite outro palpite: ");
+            scanf("%d", &palpite);
+        } while (palpite < 1 || palpite > 100); 
+    }
+
+    tentativas++;
+    printf("Parabéns!!! Você acertou em %d tentativas.\n", tentativas);
+
+    return 0;
+}
